@@ -1,4 +1,6 @@
-package leetCodeHot100;
+package leetCodeHot100.Tree;
+
+import leetCodeHot100.TreeNode;
 
 public class MaxDepth {
     public int maxDepth(TreeNode root) {

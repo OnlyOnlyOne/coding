@@ -1,12 +1,16 @@
-package leetCodeHot100;
+package leetCodeHot100.Tree;
 
 
+import leetCodeHot100.TreeNode;
 
 public class IsSymmetricTree {
     public boolean isSymmetric(TreeNode root) {
         //给定一个二叉树，判断是否是对称
         //解法：递归
         return isMirror(root, root);
+
+        //解法二：借助一个队列来解决
+
     }
 
     public boolean isMirror(TreeNode t1, TreeNode t2) {
