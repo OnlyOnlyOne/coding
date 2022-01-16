@@ -52,6 +52,11 @@ public class CopyRandomList {
 
 
 
+
+
+
+
+
             Node p = head;
             //第一步，在每个原节点后面创建一个新节点
             //1->1'->2->2'->3->3'
