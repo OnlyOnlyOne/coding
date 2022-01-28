@@ -11,6 +11,9 @@ public class SortColors {
                     temp = nums[j];
                     nums[j] = nums[j+1];
                     nums[j+1] = temp;
+
+
+
                 }
             }
         }
