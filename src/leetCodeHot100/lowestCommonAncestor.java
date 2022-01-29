@@ -10,5 +10,7 @@ public class lowestCommonAncestor {
         if(left==null) return right;
         if(right==null) return left;
         return root;
+
+
     }
 }
