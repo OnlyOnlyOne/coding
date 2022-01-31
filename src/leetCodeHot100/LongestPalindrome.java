@@ -44,6 +44,10 @@ public class LongestPalindrome {
                     if (dp[i][j] && j - i + 1 > maxLen) {
                         maxLen = j - i + 1;
                         begin = i;
+
+
+
+
                     }
                 }
             }
