@@ -24,18 +24,39 @@ public class Lc704Search {
         //使用二分查找
         //方法一：左闭右闭空间
         // 避免当 target 小于nums[0] nums[nums.length - 1]时多次循环运算
-        if (target < nums[0] || target > nums[nums.length - 1]) {
-            return -1;
-        }
-        int left = 0, right = nums.length - 1;
+        int length = nums.length;
+        if(target>nums[length-1]||target<nums[0]) return -1;
+        int left = 0;
+        int right = length - 1;
         while (left <= right) {
-            int mid = left + ((right - left) >> 1);
-            if (nums[mid] == target)
-                return mid;
-            else if (nums[mid] < target)
+            int pos = left + ((right - left) >> 1);
+            if (target == nums[pos]) {
+                return pos;
+            }
+            else if (target < nums[pos]) {
+                right = pos - 1;
+            } else if(target > nums[pos]) {
+                left = pos + 1;
+            }
+        }
+        return -1;
+
+
+
+    }
+
+    //方法二：左必右开
+    public int search2(int[] nums, int target) {
+        if(target<nums[0] || target >nums[nums.length - 1]) return -1;
+        int left = 0,right = nums.length ;
+        while (left < right) {
+            int mid = left +  (right - left)>>1;
+            if(nums[mid]>target) right = mid;
+            else if (nums[mid] < target) {
                 left = mid + 1;
-            else if (nums[mid] > target)
-                right = mid - 1;
+            }else {
+                return mid;
+            }
         }
         return -1;
     }
