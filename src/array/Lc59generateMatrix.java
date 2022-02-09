@@ -57,4 +57,22 @@ public class Lc59generateMatrix {
 
         return res;
     }
+
+    public int[][] generateMatrix2(int n) {
+        //做法二
+        int[][] matrix = new int[n][n];
+        int t = 0,l = 0,r = n-1,b =n-1;
+        int nums = 1;
+        while (nums <= n * n) {
+            for(int i = l;i<=r;i++) matrix[t][i] = nums++;
+            t++;
+            for(int i = t;i<=b;i++) matrix[i][r] = nums++;
+            r--;
+            for(int i = r;i >=l;i--) matrix[b][i] = nums++;
+            b--;
+            for(int i = b;i >=t;i--) matrix[i][l] = nums++;
+            l++;
+        }
+        return matrix;
+    }
 }
