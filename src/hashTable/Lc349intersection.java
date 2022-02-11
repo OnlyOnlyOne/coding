@@ -1,12 +1,11 @@
 package hashTable;
 
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
-
 import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
-
 public class Lc349intersection {
     public int[] intersection(int[] nums1, int[] nums2) {
         HashMap<Integer, Integer> check = new HashMap<Integer, Integer>();
