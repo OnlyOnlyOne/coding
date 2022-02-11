@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class combine {
+public class Lc77combine {
     //先定义存储路径以及全局集合
 //    List<Integer> path = new ArrayList<Integer>();
     LinkedList<Integer> path = new LinkedList<>();
