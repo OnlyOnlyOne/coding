@@ -26,6 +26,21 @@ public class MaxSubArray {
         return max;
     }
 
+    public static int maxSubArray2(int[] nums) {
+        //采用贪心算法
+        if(nums.length == 1) return nums[0];
+        int result = 0;
+        int sum = Integer.MIN_VALUE;
+
+        for (int i = 0; i < nums.length; i++) {
+            result += nums[i];
+            sum = Math.max(sum, result);
+            if(result <= 0) result = 0;
+        }
+
+        return result;
+    }
+
     public static void main(String[] args) {
         int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
         int max = maxSubArray(nums);
