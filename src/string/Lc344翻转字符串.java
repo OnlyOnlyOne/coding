@@ -1,6 +1,10 @@
 package string;
 
 public class Lc344翻转字符串 {
+    /*
+    *
+    *
+    * */
     public void reverseString(char[] s) {
         if(s.length == 0) return;
         int left = 0;
@@ -17,4 +21,6 @@ public class Lc344翻转字符串 {
         s[left] = s[right];
         s[right] = temp;
     }
+
+
 }
