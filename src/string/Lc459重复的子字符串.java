@@ -42,8 +42,8 @@ public class Lc459重复的子字符串 {
     public static void getNext(int[] arr, String string) {
         int j = -1;
         arr[0] = j;
-        for (int i = 1; i < arr.length; i++) {
-            if (j >= 0 && string.charAt(j + 1) != string.charAt(i)) {
+        for (int i = 1; i < string.length(); i++) {
+            while (j >= 0 && string.charAt(j + 1) != string.charAt(i)) {
                 j = arr[j];
             }
             if (string.charAt(j + 1) == string.charAt(i)) {
