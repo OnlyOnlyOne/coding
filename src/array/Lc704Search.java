@@ -1,5 +1,7 @@
 package array;
 
+import com.sun.org.apache.xpath.internal.operations.Minus;
+
 public class Lc704Search {
 //    public int search(int[] nums, int target) {
 //        //使用二分查找
@@ -21,28 +23,22 @@ public class Lc704Search {
 //    }
 
     public int search(int[] nums, int target) {
-        //使用二分查找
-        //方法一：左闭右闭空间
-        // 避免当 target 小于nums[0] nums[nums.length - 1]时多次循环运算
-        int length = nums.length;
-        if(target>nums[length-1]||target<nums[0]) return -1;
+        if(target<nums[0] || target > nums[nums.length - 1]) return -1;
         int left = 0;
-        int right = length - 1;
-        while (left <= right) {
-            int pos = left + ((right - left) >> 1);
-            if (target == nums[pos]) {
-                return pos;
-            }
-            else if (target < nums[pos]) {
-                right = pos - 1;
-            } else if(target > nums[pos]) {
-                left = pos + 1;
+        int right = nums.length - 1;
+        while (left <= nums.length - 1) {
+            int mid = (left + right) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            } else {
+                if (nums[mid] > target) {
+                    right = mid - 1;
+                } else {
+                    left = mid + 1;
+                }
             }
         }
         return -1;
-
-
-
     }
 
     //方法二：左必右开
