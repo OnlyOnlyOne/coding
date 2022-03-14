@@ -1,10 +1,17 @@
 package greedy;
 
+import org.junit.Test;
+
+
 public class Lc135分发糖果 {
-    public int candy(int[] ratings) {
+
+
+    @Test
+    public void candy(int[] ratings) {
+
         //利用两次贪心
         //1.从前往后，右边孩子大于左边孩子的情况
-        if(ratings.length==1) return 1;
+        if(ratings.length==1) return ;
         int[] candy = new int[ratings.length];
         candy[0] = 1;
         for (int i = 1; i < ratings.length ; i++) {
@@ -24,6 +31,7 @@ public class Lc135分发糖果 {
         for (int i = 0; i < candy.length; i++) {
             count += candy[i];
         }
-        return count;
+//        return count;
+        System.out.println(count);
     }
 }
