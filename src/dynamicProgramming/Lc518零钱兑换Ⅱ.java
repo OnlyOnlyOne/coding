@@ -1,4 +1,4 @@
-package backtracking;
+package dynamicProgramming;
 
 public class Lc518零钱兑换Ⅱ {
     public int change(int amount, int[] coins) {

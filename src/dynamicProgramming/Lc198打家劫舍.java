@@ -1,4 +1,4 @@
-package backtracking;
+package dynamicProgramming;
 
 public class Lc198打家劫舍 {
     public int rob(int[] nums) {

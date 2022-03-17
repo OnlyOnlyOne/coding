@@ -1,4 +1,4 @@
-package backtracking;
+package dynamicProgramming;
 
 public class Lc494目标和 {
     public int findTargetSumWays(int[] nums, int target) {

@@ -1,4 +1,4 @@
-package backtracking;
+package dynamicProgramming;
 
 public class Lc474一和零 {
     public static int findMaxForm(String[] strs, int m, int n) {

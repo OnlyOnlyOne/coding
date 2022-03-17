@@ -1,4 +1,4 @@
-package 美团;
+package 剑指Offer.美团;
 
 import java.util.Arrays;
 import java.util.Scanner;

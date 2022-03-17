@@ -1,4 +1,4 @@
-package backtracking;
+package dynamicProgramming;
 
 public class Lc377组合总和Ⅳ {
     public int combinationSum4(int[] nums, int target) {
