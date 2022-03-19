@@ -1,6 +1,15 @@
 package 网易;
 
 import java.util.Scanner;
+/*
+4
+*2*
+1*2
+***
+0 0 0 1 1 0
+0 2 1 1 1 2
+2 0 2 1 2 2
+*/
 
 public class Main {
     //题目描述，3*3 后面三行代表这个宫的坐标
@@ -12,6 +21,7 @@ public class Main {
 
         for (int i = 0; i < testNum; i++) {
             int[][] Sudo = new int[3][3];
+
             int[][] eachGong = new int[3][3];
             //把谜面转换为数组，0为需要填入的数
             for (int j = 0; j < 3; j++) {
@@ -23,9 +33,13 @@ public class Main {
                     }
                 }
             }
+            String param = input.nextLine();
             //标注每个宫，1为第一个宫，2未第二个宫
             for (int z = 1; z <= 3; z++) {
                 String[] gong = input.nextLine().split(" ");
+                for(String x: gong){
+                    System.out.println(x);
+                }
                 for (int q = 0; q < 3; q++) {
                     int left = Integer.parseInt(gong[q*2]);
                     int right = Integer.parseInt(gong[q * 2 + 1]);
@@ -38,12 +52,8 @@ public class Main {
             }
             System.out.println("No");
         }
-
         //开始遍历行和列
-
-
     }
-
     //遍历方法
     public static boolean function(int[][] Sudo, int[][] eachGong) {
         //遍历数组

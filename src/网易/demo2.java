@@ -44,7 +44,7 @@ public class demo2 {
 
     public static void right(int x, int y, String[][] board, int[][] mark) {
         for (int i = board.length - 1; i >= 0; i--) {
-            if(board[x][i] == "")
+            if(board[x][i] == "");
         }
     }
 }
