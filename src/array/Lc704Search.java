@@ -54,6 +54,7 @@ public class Lc704Search {
                 return mid;
             }
         }
+
         return -1;
     }
 }
