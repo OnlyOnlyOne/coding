@@ -9,6 +9,9 @@ public class Demo {
     public static void main(String[] args) {
         int[] time = {
                 5,1,2,6
+
+
+
         };
         int[] quality = {
                 2,1,4,3
